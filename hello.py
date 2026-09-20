@@ -1,0 +1,1 @@
+print("WindSense project started")
