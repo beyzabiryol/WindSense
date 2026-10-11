@@ -1,1 +1,0 @@
-print("WindSense project started")
