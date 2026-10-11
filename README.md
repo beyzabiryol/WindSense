@@ -49,3 +49,45 @@ Sensor Monitoring
 Review Cases
    ↓
 CSV Reports + Visualizations
+
+## Results
+
+Three regression models were evaluated on the final test period:
+
+| Model | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Linear Regression | 72.52 | 97.16 | 0.951 |
+| Random Forest | 37.54 | 51.49 | 0.986 |
+| Gradient Boosting | 38.36 | 50.75 | 0.987 |
+
+Random Forest was selected based on expanding-window time-series validation.
+
+During the final test period:
+
+- Performance review cases: 0
+- Sensor review cases: 8
+
+The highest-severity sensor review case was observed for T03 at high load, where vibration exceeded its historical load-aware range.
+
+Review cases represent statistical deviations and are not confirmed mechanical failures.
+
+---
+
+## Visualizations
+
+### Actual vs Predicted Power
+
+![Actual vs Predicted Power](reports/figures/actual_vs_predicted_power.png)
+
+### Sensor Review Severity
+
+![Sensor Review Severity](reports/figures/sensor_review_severity.png)
+
+---
+
+## Run Locally
+
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
